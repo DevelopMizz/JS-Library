@@ -11,21 +11,21 @@ ver personRO = new function(age, firstName, lastName, adress){
    //getters
    this.getAge = function(){
     return priAge;
-   } 
+   }; 
    
    this.getfirstName = function(){
     return priFirstName;
-   }
+   };
    
    this.getLastName = function(){
     return priLAstName;
-   }
+   };
    this.getAdressObj = function(){
     return priAdressObj;
-   }
-}
+   };
+};
 /*-------------------------------------------------------------------------------------------------------------------*/
-//class 1: person_WriteOnly
+//class2: person_WriteOnly
 //--------------------------------------------------------------------------------------------------------------------
 ver personRO = new function(age, firstName, lastName, adress){
    var priAge = age, priFirstName = firstName, priLastName=lastName, priAdressObj = adress;
@@ -37,7 +37,7 @@ ver personRO = new function(age, firstName, lastName, adress){
         return true;
       }
       return false;
-   } 
+   }; 
    
    this.setfirstName = function(name){
       if(firstname != false){
@@ -45,7 +45,7 @@ ver personRO = new function(age, firstName, lastName, adress){
         return true;
       }
       return false
-   }
+   };
    
    this.setLastName = function(lName){
       if(lName != false){
@@ -53,14 +53,15 @@ ver personRO = new function(age, firstName, lastName, adress){
           return true;    
       }
       return false;
-   }
+   };
    this.setAdress = function(adress){
       if(adress.getSetState() !== "unset"){
           priLAdressObj = adress;
           return true;    
       }
       return false;
-   }
+   };
+};
 /*-------------------------------------------------------------------------------------------------*/
 //class 2: Person_Read&Write
 //--------------------------------------------------------------------------------------------------
@@ -70,19 +71,19 @@ ver person = new function(age, firstName, lastName, adress){
  //getters
    this.getAge = function(){
     return priAge;
-   } 
+   }; 
    
    this.getfirstName = function(){
     return priFirstName;
-   }
+   };
    
    this.getLastName = function(){
     return priLAstName;
-   }
+   };
    
    this.getAdressObj = function(){
     return priAdressObj;
-   }
+   };
    
    //setters
    this.setAge = function(age){
@@ -91,7 +92,7 @@ ver person = new function(age, firstName, lastName, adress){
         return true;
       }
       return false;
-   } 
+   }; 
    
    this.setfirstName = function(name){
       if(firstname != false){
@@ -99,7 +100,7 @@ ver person = new function(age, firstName, lastName, adress){
         return true;
       }
       return false
-   }
+   };
    
    this.getLastName = function(lName){
       if(lName != false){
@@ -107,7 +108,7 @@ ver person = new function(age, firstName, lastName, adress){
           return true;    
       }
       return false;
-   }
+   };
    
    this.setAdress = function(adress){
       if(adress.getSetState() !== "unset"){
@@ -115,8 +116,8 @@ ver person = new function(age, firstName, lastName, adress){
           return true;    
       }
       return false;
-   }
-}
+   };
+};
 ?*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
                                               File End
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
