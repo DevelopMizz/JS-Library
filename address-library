@@ -1,0 +1,39 @@
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+                                                File Start
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+/*----------------------------------------------------------------------------------------------------------------------------*/
+//class 1 adressReadOnly 
+/*----------------------------------------------------------------------------------------------------------------------------*/
+var adress = new function(firstLine, secondLine, city, countyOrArea, country, zipOrPostCode){
+    var priFirstLine = firstLine, priSecondLine = secondLine, priCity = city, priCountyOrArea = countyOrArea, 
+    priCountry =country , priZipOrPostCode = zipOrPostCode;
+    
+    //getters
+    this.getAdress = fuction(){
+      return this;
+    }; 
+    
+    this.getFirstLine = function(){
+      return priFirstLine;
+    };
+    
+    this.getSecondLine = function(){
+      return priSecondLine;
+    };
+    
+    this.getCity = function(){
+      return priCity;
+    };
+    
+    this.getCountyOrArea = function(){
+      return priCountyOrArea;
+    };
+    
+    this.getCountry = function(){
+      return priCountry;
+    };
+    
+    this.getZipOrPostCode = function(){
+      return priZipOrPostCode;
+    };
+};
