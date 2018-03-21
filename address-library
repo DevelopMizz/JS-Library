@@ -37,3 +37,104 @@ var adress = new function(firstLine, secondLine, city, countyOrArea, country, zi
       return priZipOrPostCode;
     };
 };
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+//Adress - Getter and setter version
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+var adress = new function(firstLine, secondLine, city, countyOrArea, country, zipOrPostCode){
+    var priFirstLine = firstLine, priSecondLine = secondLine, priCity = city, priCountyOrArea = countyOrArea, 
+    priCountry =country , priZipOrPostCode = zipOrPostCode;
+    
+    //getters
+    this.getAdress = fuction(){
+      return this;
+    }; 
+    
+    this.getFirstLine = function(){
+      return priFirstLine;
+    };
+    
+    this.getSecondLine = function(){
+      return priSecondLine;
+    };
+    
+    this.getCity = function(){
+      return priCity;
+    };
+    
+    this.getCountyOrArea = function(){
+      return priCountyOrArea;
+    };
+    
+    this.getCountry = function(){
+      return priCountry;
+    };
+    
+    this.getZipOrPostCode = function(){
+      return priZipOrPostCode;
+    };
+    
+    //setters
+    this.setArea = function(area){
+      this.adress = new this(firstLine, secondLine, city, countyOrArea, country, zipOrPostCode);
+    };
+    
+    this.setFirstLine = function(fl){
+      this.priFirstLine = fl;
+    };
+  
+    this.setSecondLine = function(sl){
+      this.priSecondLine = sl;
+    };
+    
+    this.setCity = function(city){
+      this.priCity = city;
+    };
+     
+    this.setCountyOrArea = function(CoA){
+      this.priCountyOrArea = CoA;
+    };
+    
+    this.setCountry = function(co){
+      this.priCountry = co;
+    }
+    
+    this.setZipOrPostCoode = function(pc){
+      this.priZipOrPostCode = pc;
+    }
+};
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+//setter only
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+var adress = new function(firstLine, secondLine, city, countyOrArea, country, zipOrPostCode){
+    var priFirstLine = firstLine, priSecondLine = secondLine, priCity = city, priCountyOrArea = countyOrArea, 
+    priCountry =country , priZipOrPostCode = zipOrPostCode;
+    
+    //setters
+    this.setArea = function(area){
+      this.adress = new this(firstLine, secondLine, city, countyOrArea, country, zipOrPostCode);
+    };
+    
+    this.setFirstLine = function(fl){
+      this.priFirstLine = fl;
+    };
+  
+    this.setSecondLine = function(sl){
+      this.priSecondLine = sl;
+    };
+    
+    this.setCity = function(city){
+      this.priCity = city;
+    };
+     
+    this.setCountyOrArea = function(CoA){
+      this.priCountyOrArea = CoA;
+    };
+    
+    this.setCountry = function(co){
+      this.priCountry = co;
+    }
+    
+    this.setZipOrPostCoode = function(pc){
+      this.priZipOrPostCode = pc;
+    }
+};
