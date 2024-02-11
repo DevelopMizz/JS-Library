@@ -1,63 +1,68 @@
-window.linkedList = window.linkedList|| new function(){
-	this.head = null;
-	this.tail = null;
-	this.length = 0;
-	//append node.
-	this.appendToTail = function(e){
-		if (this.length === 0){
-			this.head = new node(null, e, null);
-			this.tail = this.head;
-			this.length+=1;
-		}else{
-			let temp = this.tail;
-			temp.next = new node(temp,e, null);
-			this.tail = temp.next;
-			this.length+=1;
+//version 1.0.0.0
+//published by Joshua Mizzi
+//Writien by Joshua Mizzi
+(function(g){
+	g.linkedList = g.linkedList|| new function(){
+		this.head = null;
+		this.tail = null;
+		this.length = 0;
+		//append node.
+		this.appendToTail = function(e){
+			if (this.length === 0){
+				this.head = new node(null, e, null);
+				this.tail = this.head;
+				this.length+=1;
+			}else{
+				let temp = this.tail;
+				temp.next = new node(temp,e, null);
+				this.tail = temp.next;
+				this.length+=1;
+			}
+		}
+		this.appendToHead = function(e){
+			if(this.length === 0){
+				this.head = new node(null, e, null);
+				this.tail = this.head;
+				this.length+=1;
+			}else{
+				let temp = this.head;
+				temp.previous = new node(null, e, temp);
+				this.head = temp.previous;
+				this.length+=1;
+			}
+		}
+		//remove nodes
+		this.removedFromHead = function(){
+			if(this.length == 0){
+				console.log("Cannot remove from an empty linked-list");
+			}else if(this.length == 1){
+				this.head = null;
+				this.tail = null;
+				this.length = 0;
+			}else{
+				let temp = this.head.next;
+				this.head = temp;
+				this.length -= 1;
+			}
+		}
+		this.removeFromTail = function(){
+			if(this.length == 0){
+				console.log("Cannot remove from an empty linked-list");
+			}else if(this.length == 1){
+				this.head = null;
+				this.tail = null;
+				this.length = 0;
+			}else{
+				let temp = this.tail.previous;
+				this.tail = temp;
+				this.length -= 1;
+			}
+		}
+		//node object constructor
+		function node(p, e, n){
+			this.previous = p;
+			this.current = e;
+			this.next = n;
 		}
 	}
-	this.appendToHead = function(e){
-		if(this.length === 0){
-			this.head = new node(null, e, null);
-			this.tail = this.head;
-			this.length+=1;
-		}else{
-			let temp = this.head;
-			temp.previous = new node(null, e, temp);
-			this.head = temp.previous;
-			this.length+=1;
-		}
-	}
-	//remove nodes
-	this.removedFromHead = function(){
-		if(this.length == 0){
-			console.log("Cannot remove from an empty linked-list");
-		}else if(this.length == 1){
-			this.head = null;
-			this.tail = null;
-			this.length = 0;
-		}else{
-			let temp = this.head.next;
-			this.head = temp;
-			this.length -= 1;
-		}
-	}
-	this.removeFromTail = function(){
-		if(this.length == 0){
-			console.log("Cannot remove from an empty linked-list");
-		}else if(this.length == 1){
-			this.head = null;
-			this.tail = null;
-			this.length = 0;
-		}else{
-			let temp = this.tail.previous;
-			this.tail = temp;
-			this.length -= 1;
-		}
-	}
-	//node object constructor
-	function node(p, e, n){
-		this.previous = p;
-		this.current = e;
-		this.next = n;
-	}
-}
+})(window||global);
